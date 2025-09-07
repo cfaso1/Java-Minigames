@@ -103,7 +103,7 @@ public class Snake extends Pad{
       //ends theme music and plays game over sound after snake dies
         clip.stop();
         clip.close();
-        File gameOverPath = new File("gameover.wav");
+        File gameOverPath = new File("assets/gameover.wav");
         AudioInputStream s2 = AudioSystem.getAudioInputStream(gameOverPath);
         clip.open(s2);
         clip.start();
@@ -125,7 +125,7 @@ public class Snake extends Pad{
     public static void main(String[] args) throws InterruptedException, IOException, UnsupportedAudioFileException, LineUnavailableException {
         //theme music setup
         Clip clip = AudioSystem.getClip();
-        File themePath = new File("theme.wav");
+        File themePath = new File("assets/theme.wav");
         AudioInputStream s1 = AudioSystem.getAudioInputStream(themePath);
         clip.open(s1);
         clip.start();

@@ -65,12 +65,12 @@ public class MineSweeper extends Pad{
 	public void gameOver(boolean lost) {
         setEventsEnabled(false);
 		if(lost) {
-			Sound s = new Sound("gameover.wav");
+			Sound s = new Sound("assets/gameover.wav");
 			s.play();
-			new Image("bomb.png",0,0,PAD_WIDTH,PAD_WIDTH);
+			new Image("assets/bomb.png",0,0,PAD_WIDTH,PAD_WIDTH);
 		}
 		else {
-			Sound s = new Sound("winner.wav");
+			Sound s = new Sound("assets/winner.wav");
 			s.play(); 
 		}   
 	}

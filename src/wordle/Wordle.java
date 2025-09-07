@@ -28,7 +28,7 @@ public class Wordle extends Board{
 
 	public String pickWord(){
 		list=new ArrayList<String>();
-		File inputFile = new File("lib/words.txt");
+		File inputFile = new File("assets/words.txt");
 		Scanner input = null;
 		try {
 			input = new Scanner(inputFile);
