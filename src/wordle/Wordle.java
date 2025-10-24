@@ -47,7 +47,8 @@ public class Wordle extends Board{
 	}
 	
 	public void colorCodeBox(int col, Color c) {
-		Rectangle r = new Rectangle(col*getColWidth(), currentRow*getColWidth(), getPieceSize(), getPieceSize());
+		// Make box slightly smaller (98x98) to preserve 1px borders on all sides
+		Rectangle r = new Rectangle(col*getColWidth()+1, currentRow*getColWidth()+1, getPieceSize()-2, getPieceSize()-2);
 		r.setFillColor(c);
 		r.setText(letters[col]);
 		r.setFontSize(100);
@@ -137,7 +138,7 @@ public class Wordle extends Board{
 			backspace();
 		else if (!isRowFull()){
 			letters[currentCol] = keyText;
-			colorCodeBox(currentCol,Color.GRAY);
+			colorCodeBox(currentCol,Color.WHITE);
 			currentCol++;
 		}
 	}
